@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-Using [vue-gh-pages](https://github.com/KieferSivitz/vue-gh-pages) to deploy Vue.js app to gh-pages.
+Using [vue-gh-pages](https://github.com/KieferSivitz/vue-gh-pages) to deploy Vue.js app to gh-pages. Here’s an alternate manual process: https://medium.com/@mwolfhoffman/deploying-to-github-pages-with-vue-webpack-cli-5b2ba17f14a0
 
 ``` bash
 # install dependencies
