@@ -1,4 +1,4 @@
-# vue-wallpapers
+# Vue Wallpapers
 
 > Quickly browse, search, filter and download Vue.js wallpapers
 
