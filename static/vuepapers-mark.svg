@@ -1,0 +1,32 @@
+<svg width="150" height="87" viewBox="0 0 150 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>vuepapers-mark</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-353 63)">
+<g id="vuepapers-mark">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(353 -63)" fill="#4A4063"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(373.02 -63)" fill="#E4B7E5"/>
+</g>
+</g>
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(403 -63)" fill="#4A4063"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(423.02 -63)" fill="#E4B7E5"/>
+</g>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(413 -37)" fill="#42B883"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 61.5385 0L 50.0255 20.1124L 38.4615 0L 0 0L 50.0255 87L 100 0L 61.5385 0Z"/>
+<path id="path1_fill" d="M 41.5181 0L 30.0051 20.1124L 18.4412 0L -3.8866e-07 0L 30.0051 52.2L 60.0102 0L 41.5181 0Z"/>
+<path id="path2_fill" d="M 30 26L 15 0L 0 26L 30 26Z"/>
+</defs>
+</svg>
