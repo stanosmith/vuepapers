@@ -3,10 +3,10 @@
     <router-view/>
 
     <footer class="footer">
-      <p>
+      <div>
         <!-- TODO: Use SvgIcon component -->
         Made with <span class="svg-icon"><svg alt="yin &amp; yang" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-18a8 8 0 1 0 0 16 4 4 0 1 1 0-8 4 4 0 1 0 0-8zm0 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0-8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg></span> by <a href="https://twitter.com/stanosmith">@stanosmith</a>
-      </p>
+      </div>
     </footer>
   </div>
 </template>
@@ -23,6 +23,18 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono|Oxygen:300,400,700');
   @import "vars";
 
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
   html, body {
     min-height: 100%;
     margin: 0;
@@ -31,6 +43,7 @@ export default {
 
   body {
     font-family: "Oxygen", Helvetica, Arial, sans-serif;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $purple-light;
@@ -95,7 +108,12 @@ export default {
   }
 
   .footer {
-    padding: 10vh 16px;
+    font-size: 14px;
+    padding: 16px;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 </style>
