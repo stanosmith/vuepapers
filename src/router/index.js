@@ -13,7 +13,8 @@ export default new Router({
       component: Home,
       beforeEnter: (to, from, next) => {
         store.dispatch('getSpace');
-        store.dispatch('getEntries');
+        store.dispatch('getAllEntries');
+        store.dispatch('getAllWallpapers');
         next();
       },
     },

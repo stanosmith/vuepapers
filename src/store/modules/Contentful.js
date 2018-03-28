@@ -17,6 +17,7 @@ const handleError = (error) => {
 const STATE = {
   spaceData: {},
   allEntries: [],
+  allWallpapers: [],
 };
 
 const getters = {};
@@ -28,30 +29,51 @@ const mutations = {
   getEntriesSuccess: (state, entriesData) => {
     state.allEntries = entriesData;
   },
+  getWallpapersSuccess: (state, wallpapersData) => {
+    state.allWallpapers = wallpapersData;
+  },
   getEntrySuccess: (state, entryData) => {
     console.log(entryData);
   },
 };
 
 const actions = {
-  getSpace: context => axios.get(`/${SPACE_ID}`, {
-    params: {
-      access_token: ACCESS_TOKEN,
-    },
-  })
-    .then((res) => {
-      context.commit('getSpaceSuccess', res.data);
-      return res.data;
-    }, handleError),
-  getEntries: context => axios.get(`/${SPACE_ID}/entries`, {
-    params: {
-      access_token: ACCESS_TOKEN,
-    },
-  })
-    .then((res) => {
-      context.commit('getEntriesSuccess', res.data);
-      return res.data;
-    }, handleError),
+  getSpace: context =>
+    axios
+      .get(`/${SPACE_ID}`, {
+        params: {
+          access_token: ACCESS_TOKEN,
+        },
+      })
+      .then((res) => {
+        context.commit('getSpaceSuccess', res.data);
+        return res.data;
+      }, handleError),
+  getAllEntries: context =>
+    axios
+      .get(`/${SPACE_ID}/entries`, {
+        params: {
+          access_token: ACCESS_TOKEN,
+          include: 10,
+        },
+      })
+      .then((res) => {
+        context.commit('getEntriesSuccess', res.data);
+        return res.data;
+      }, handleError),
+  getAllWallpapers: context =>
+    axios
+      .get(`/${SPACE_ID}/entries`, {
+        params: {
+          access_token: ACCESS_TOKEN,
+          include: 5,
+          content_type: 'wallpaper',
+        },
+      })
+      .then((res) => {
+        context.commit('getWallpapersSuccess', res.data);
+        return res.data;
+      }, handleError),
 };
 
 export default {
