@@ -24,28 +24,29 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  @import "../style/vars";
+<style scoped
+       lang="scss">
+@import '../style/vars';
 
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $purple;
-    background: linear-gradient(180deg, rgba(178, 136, 192, 0), $purple);
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $purple;
+  background: linear-gradient(180deg, rgba(178, 136, 192, 0), $purple);
 
-    .logo {
-      display: block;
-      margin: 0 auto;
-    }
-
-    &--content {
-      padding: 32px 16px;
-    }
+  .logo {
+    display: block;
+    margin: 0 auto;
   }
 
-  .hero, .section {
-    min-height: 90vh;
+  &--content {
+    padding: 32px 16px;
   }
+}
 
+.hero,
+.section {
+  min-height: 90vh;
+}
 </style>

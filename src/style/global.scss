@@ -6,20 +6,23 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+  font-family: 'Oxygen', Helvetica, Arial, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,24 +30,31 @@ body {
   background-color: $purple-dark;
 }
 
-pre, code, .monospace, .code {
-  font-family: "Oxygen Mono", monospace;
+pre,
+code,
+.monospace,
+.code {
+  font-family: 'Oxygen Mono', monospace;
   color: #42b883;
   background-color: $blue;
 }
 
 code {
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   display: inline-block;
   border-radius: 2px;
 }
 
-h1, .h1, h2, .h2 {
+h1,
+.h1,
+h2,
+.h2 {
   font-weight: lighter;
   margin-top: 0;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 3rem;
 }
 
