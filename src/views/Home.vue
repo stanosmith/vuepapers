@@ -9,12 +9,18 @@
         </p>
       </div>
     </div>
+    <!--<section>
+      <picture>
+        <source srcset="">
+        <img src=""
+             alt=""></picture>
+    </section>-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'home',
   data() {
     return {
       msg: 'Vuepapers',

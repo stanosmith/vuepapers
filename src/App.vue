@@ -16,7 +16,7 @@
 import svgIcon from '@/components/SvgIcon';
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     svgIcon,
   },
