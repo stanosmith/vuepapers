@@ -1,5 +1,5 @@
 {
-  "name": "vue-wallpapers",
+  "name": "vuepapers",
   "version": "1.0.0",
   "description": "Quickly browse, search, filter and download Vue.js wallpapers",
   "author": "Stan Smith <choicedesign@gmail.com>",
@@ -11,7 +11,7 @@
     "build": "node build/build.js",
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
-  "homepage": "git@github.com:stanosmith/vue-wallpapers",
+  "homepage": "https://stanosmith.github.io/vuepapers",
   "dependencies": {
     "axios": "^0.18.0",
     "feather-icons": "^4.7.0",
