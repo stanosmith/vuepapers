@@ -22,8 +22,7 @@
         <div class="card--controls">
           <!-- TODO: Convert to button and force a download instead of opening a new tab -->
           <a :href="`https://res.cloudinary.com/stanosmith/image/upload${wallpaper.fields.cloudinaryUrl}`"
-             :title="`Download ${wallpaper.fields.name}`"
-             target="wallpaper">
+             :title="`Download ${wallpaper.fields.name}`">
             <f-icon icon-name="download"></f-icon>
           </a>
           <!-- TODO: Add attribution info -->
