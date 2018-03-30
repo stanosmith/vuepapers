@@ -15,6 +15,7 @@
       <div class="card"
          v-for="wallpaper in allWallpapers.items"
          :key="wallpaper.sys.id">
+        <!-- TODO: Make the thumbnail width dynamic, based on the actual width of the card -->
         <img :src="`https://res.cloudinary.com/stanosmith/image/upload/w_200${wallpaper.fields.cloudinaryUrl}`"
              alt="">
         <h3>{{wallpaper.fields.name}}</h3>
