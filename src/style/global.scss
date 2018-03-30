@@ -95,10 +95,19 @@ a {
 }
 
 .footer {
-  font-size: 14px;
-  padding: 16px;
-  min-height: 10vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
+  padding: 32px;
+  min-height: 10vh;
+
+  &--item {
+    margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
