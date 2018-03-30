@@ -11,7 +11,7 @@
     "build": "node build/build.js",
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
-  "homepage": "https://stanosmith.github.io/vuepapers",
+  "homepage": "git@github.com:stanosmith/vuepapers",
   "dependencies": {
     "axios": "^0.18.0",
     "feather-icons": "^4.7.0",
