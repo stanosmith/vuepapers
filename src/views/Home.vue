@@ -28,7 +28,9 @@
         <h3>{{wallpaper.fields.name}}</h3>
         <div class="card--controls">
           <!-- TODO: Convert to button and force a download instead of opening a new tab -->
-          <a :href="`https://res.cloudinary.com/stanosmith/image/upload${wallpaper.fields.cloudinaryUrl}`"
+          <a class="link link--download"
+             :href="`https://res.cloudinary.com/stanosmith/image/upload/w_${screenResolution.width}${wallpaper.fields.cloudinaryUrl}`"
+             target="_blank"
              :title="`Download ${wallpaper.fields.name}`">
             <f-icon icon-name="download"></f-icon>
           </a>
@@ -131,6 +133,10 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .link {
+      padding: 1rem 1.5rem;
     }
 
     .btn {
