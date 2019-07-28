@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <div class="hero">
       <div class="hero--content">
         <img class="logo img-fluid"
@@ -10,11 +10,18 @@
         </p>
       </div>
     </div>
+
+    <section>
+      <p>
+        Your screen resolution: <code>{{screenResolution.width}} x {{screenResolution.height}}</code>
+      </p>
+    </section>
+
     <section class="section cards"
              v-if="allWallpapers.items">
       <div class="card"
-         v-for="wallpaper in allWallpapers.items"
-         :key="wallpaper.sys.id">
+           v-for="wallpaper in allWallpapers.items"
+           :key="wallpaper.sys.id">
         <!-- TODO: Make the thumbnail width dynamic, based on the actual width of the card -->
         <img :src="`https://res.cloudinary.com/stanosmith/image/upload/w_200${wallpaper.fields.cloudinaryUrl}`"
              alt="">
@@ -39,102 +46,111 @@
         </div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import fIcon from '@/components/FeatherIcon';
+  import {mapState} from 'vuex';
+  import fIcon from '@/components/FeatherIcon';
 
-export default {
-  name: 'home',
-  data() {
-    return {
-      msg: 'Vuepapers',
-    };
-  },
-  components: {
-    fIcon,
-  },
-  computed: {
-    ...mapState({
-      allWallpapers: state => state.Contentful.allWallpapers,
-    }),
-  },
-};
+  export default {
+    name: 'home',
+
+    data() {
+      return {
+        msg: 'Vuepapers',
+      };
+    },
+
+    components: {
+      fIcon,
+    },
+
+    computed: {
+      ...mapState({
+        allWallpapers: state => state.Contentful.allWallpapers,
+      }),
+      screenResolution: () => {
+        return {
+          width: window.screen.width,
+          height: window.screen.height,
+        }
+      }
+    },
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped
        lang="scss">
-@import '../style/vars';
+  @import '../style/vars';
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $purple;
-  background: linear-gradient(180deg, rgba(178, 136, 192, 0), $purple);
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $purple;
+    background: linear-gradient(180deg, rgba(178, 136, 192, 0), $purple);
 
-  .logo {
-    display: block;
-    margin: 0 auto;
+    .logo {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &--content {
+      padding: 32px 16px;
+    }
   }
 
-  &--content {
-    padding: 32px 16px;
-  }
-}
-
-.hero,
-.section {
-  min-height: 70vh;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background: $blue;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.card {
-  /*flex-grow: 1;*/
-  /*flex-basis: 30%;*/
-  margin: 16px;
-  background: $purple-dark;
-  border: 3px solid $purple;
-  color: $purple;
-  text-decoration: none;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
+  .hero,
+  .section {
+    min-height: 70vh;
   }
 
-  .btn {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: $blue;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .card {
+    /*flex-grow: 1;*/
+    /*flex-basis: 30%;*/
+    margin: 16px;
     background: $purple-dark;
-    color: $green;
-    border: none;
+    border: 3px solid $purple;
+    color: $purple;
+    text-decoration: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .btn {
+      background: $purple-dark;
+      color: $green;
+      border: none;
+    }
+
+    code {
+      text-align: left;
+      font-size: 10px;
+    }
+
+    pre {
+      max-height: 30em;
+      /*overflow: auto;*/
+    }
   }
 
-  code {
-    text-align: left;
-    font-size: 10px;
+  .card--controls {
+    margin-bottom: 1em;
   }
-
-  pre {
-    max-height: 30em;
-    /*overflow: auto;*/
-  }
-}
-
-.card--controls {
-  margin-bottom: 1em;
-}
 </style>
