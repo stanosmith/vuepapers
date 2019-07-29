@@ -42,7 +42,7 @@
           <a
             class="link link--download"
             :href="
-              `https://res.cloudinary.com/stanosmith/image/upload/w_${screenResolution.width}${wallpaper.fields.cloudinaryUrl}`
+              `https://res.cloudinary.com/stanosmith/image/upload/c_fill,g_face,w_${screenResolution.width},h_${screenResolution.height}${wallpaper.fields.cloudinaryUrl}`
             "
             target="_blank"
             :title="`Download ${wallpaper.fields.name}`"
